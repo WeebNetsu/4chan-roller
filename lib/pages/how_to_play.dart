@@ -65,7 +65,10 @@ class _HowToPlayPageState extends State<HowToPlayPage> {
                     'https://www.youtube.com/stevesteacher',
                   );
 
-                  if (!await launchUrl(url)) {
+                  if (!await launchUrl(
+                    url,
+                    mode: LaunchMode.externalApplication,
+                  )) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                         content: Text("Could not open the YouTube app"),
@@ -96,7 +99,10 @@ class _HowToPlayPageState extends State<HowToPlayPage> {
                     'https://github.com/WeebNetsu/4chan-roller',
                   );
 
-                  if (!await launchUrl(url)) {
+                  if (!await launchUrl(
+                    url,
+                    mode: LaunchMode.externalApplication,
+                  )) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                         content: Text("Could not open GitHub"),
